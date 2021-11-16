@@ -1,0 +1,639 @@
+/* reset css */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* couleurs */
+
+:root {
+  --blanc: #fff;
+  --gris-clair: #ddd;
+  --gris-transparant: rgba(0, 0, 0, 0.212);
+  --gris: rgb(155, 155, 155);
+  --gris-fonce: rgb(94, 94, 94);
+  --bleu-clair: #c1d2d9;
+  --bleu-fonce: #7bafc9;
+  --orange: orange;
+}
+/* global */
+
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 1283px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.mx-auto {
+  /* Centre un contenue  : signigie horyzontalement */
+  margin: auto;
+  text-align: center;
+}
+
+.mt-37 {
+  margin-top: 37px;
+}
+
+/* header */
+
+header {
+  background: url("../img/bg.jpg") no-repeat center;
+  width: 100%;
+  height: 935px;
+  background-size: cover;
+  color: white;
+}
+
+/* header container 1220px */
+.container_header {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+li,
+a {
+  /* padding: 10px; */
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+  /* transition: all 1s ease; */
+  border-radius: 25px;
+}
+
+.nav_header {
+  padding: 25px 10%;
+  height: 85px;
+  background-color: var(--gris-transparant);
+  margin-bottom: 20px;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav_link {
+  list-style: none;
+}
+
+.nav_link li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+.nav_link li a {
+  transition: all 0.3s ease 0s;
+  padding: 10px;
+}
+
+.nav_link li a:hover,
+.cta:hover {
+  background-color: var(--bleu-fonce);
+}
+
+.cta {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: transparent;
+  border: white 1px solid;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+/* heade text */
+
+header h1 {
+  font-family: "Ephesis", cursive;
+  font-size: 40px;
+}
+
+header h2 {
+  font-family: "Ephesis", cursive;
+  padding-top: 8px;
+
+  font-size: 70px;
+}
+
+header p {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+/* main */
+main {
+  height: 1745px;
+}
+
+/* Parametre */
+
+.params {
+  background-color: var(--bleu-clair);
+  height: 105px;
+}
+
+.params h3 {
+  padding-left: 66px;
+  font-size: 25px;
+  color: var(--bleu-fonce);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.params i {
+  display: flex;
+  color: var(--bleu-fonce);
+  font-size: 25px;
+  justify-content: flex-end;
+  padding-right: 66px;
+}
+
+/* offer */
+.offer {
+  height: 510px;
+}
+
+.offer img {
+  max-height: 390px;
+  width: 393px;
+}
+
+.prix {
+  position: absolute; /* ici la position absolute est par rapport au parent le plus proche en position relative, c'est à dire article div. Attention si on ne précise pas de position relative, il se place par rapport à body (naturellement en position relative) */
+  top: 2%;
+  left: 2%;
+  background-color: var(--blanc);
+  padding: 15px 10px;
+  border: none;
+}
+
+figcaption {
+  height: 115px;
+  border: 1px solid var(--gris-clair);
+  max-width: 393px;
+  padding: 7%;
+  line-height: 30px;
+}
+
+figcaption h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+figcaption p {
+  font-size: 12px;
+  /* font-weight: lighter; */
+}
+
+/* btn more */
+
+.btn-more {
+  padding: 14px;
+  border: 1px solid var(--bleu-fonce);
+  border-radius: 25px;
+  width: 160px;
+  font-size: 13px;
+  color: var(--bleu-fonce);
+  transition: 1s ease;
+}
+
+.btn-more:hover {
+  background-color: var(--bleu-fonce);
+  color: var(--blanc);
+}
+
+/* footer */
+
+footer {
+  height: 422px;
+  background-color: var(--bleu-fonce);
+}
+footer a {
+  color: var(--blanc);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--orange);
+}
+
+footer p {
+  line-height: 50px;
+  color: var(--blanc);
+  font-size: 15px;
+}
+footer p:first-of-type {
+  margin-top: 40px;
+}
+
+footer a {
+  padding-right: 25px;
+  font-size: 1.2em;
+}
+
+/* copyri */
+
+.separate {
+  border-top: 1px solid var(--blanc);
+}
+
+.separate p {
+  margin-top: 30px;
+}
+
+/* social */
+
+.social i {
+  margin-top: 30px;
+  padding-right: 35px;
+  color: var(--blanc);
+  font-size: 15px;
+}
+
+.social i:hover {
+  color: var(--orange);
+}
+
+/* grid */
+.col-1 {
+  width: 8.333333%;
+}
+
+.col-2 {
+  width: 16.66666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.333333%;
+  /* padding: 3%; */
+}
+
+.col-5 {
+  width: 41.66666%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66666%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* responsive labtop */
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  /* global */
+  .container {
+    width: 770px;
+  }
+
+  .phone-none {
+    display: none;
+  }
+  /* header */
+  .container_header {
+    width: 100%;
+  }
+
+  .nav_header {
+    padding: 0;
+    padding-top: 15px;
+  }
+  .container_header {
+    flex-direction: column;
+  }
+  .nav_link li,
+  .nav_link a {
+    padding: 0;
+    border: none;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .logo {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  /* main */
+  main {
+    height: 2720px;
+  }
+
+  /* offer */
+
+  .offer article {
+    padding: 50px;
+  }
+
+  /* footer */
+
+  footer {
+    height: 800px;
+    /* padding: 0 100px; */
+  }
+
+  footer section:last-of-type p {
+    padding: 0 40px;
+  }
+  footer section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .social {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+
+  .social i:last-of-type {
+    padding-right: 0;
+  }
+
+  /* grid */
+
+  .col-2 {
+    width: 33.333333%;
+  }
+
+  .col-4 {
+    width: 50%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+}
+
+/* responsive phone */
+
+@media screen and (max-width: 768px) {
+  /* global */
+
+  .container {
+    width: 100%;
+  }
+
+  .flex-row {
+    flex-direction: column;
+  }
+
+  /* header */
+
+  .container_header {
+    width: 100%;
+  }
+
+  .nav_header {
+    padding: 0;
+    padding-top: 15px;
+  }
+  .container_header {
+    flex-direction: column;
+  }
+  .nav_link li,
+  .nav_link a {
+    padding: 0;
+    border: none;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .logo {
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  /* main */
+
+  .offer article {
+    /* margin: 50px; */
+    padding: 50px;
+  }
+
+  main {
+    height: 4800px;
+  }
+  .phone-none {
+    display: none;
+  }
+
+  .params h3 {
+    padding: 0;
+  }
+
+  /* footer */
+
+  footer {
+    height: 1510px;
+    padding: 20px;
+    line-height: normal;
+  }
+
+  footer p:first-of-type {
+    margin: 0;
+    text-align: center;
+  }
+
+  /* footer p:last-of-type {
+    margin-bottom: 80px;
+  } */
+
+  .social {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+  }
+
+  .social i:last-of-type {
+    padding-right: 0;
+  }
+
+  /* grid */
+  .col-2 {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+}
